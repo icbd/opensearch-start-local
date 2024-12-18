@@ -4,7 +4,6 @@ services:
     image: ${OPENSEARCH_IMAGE}:${OPENSEARCH_VERSION} # Specifying the latest available image - modify if you want a specific version
     container_name: opensearch-node1
     environment:
-      - cluster.name=opensearch-cluster # Name the cluster
       - node.name=opensearch-node1 # Name the node that will run in this container
       - discovery.type=single-node
       - bootstrap.memory_lock=true # Disable JVM heap memory swapping
