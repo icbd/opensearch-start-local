@@ -10,6 +10,7 @@ RUN yum install -y unzip && \
 RUN /usr/share/opensearch/bin/opensearch-plugin install -b repository-s3 --batch && \
     /usr/share/opensearch/bin/opensearch-plugin install -b analysis-kuromoji && \
     /usr/share/opensearch/bin/opensearch-plugin install -b analysis-smartcn && \
+    /usr/share/opensearch/bin/opensearch-plugin install -b https://get.infini.cloud/opensearch/analysis-stconvert/${OPENSEARCH_VERSION} && \
     /usr/share/opensearch/bin/opensearch-plugin install -b analysis-icu && \
     /usr/share/opensearch/bin/opensearch-plugin install -b https://get.infini.cloud/opensearch/analysis-ik/${OPENSEARCH_VERSION} && \
     /usr/share/opensearch/bin/opensearch-plugin install -b https://github.com/WorksApplications/elasticsearch-sudachi/releases/download/v3.3.0/opensearch-${OPENSEARCH_VERSION}-analysis-sudachi-3.3.0.zip
