@@ -15,9 +15,19 @@ with plugins: ik-smartcn-kuromoji-icu-sudachi-repos3-stconvert
 ```shell
 cp .env.example .env
 
-docker build -t "${OPENSEARCH_IMAGE}:${OPENSEARCH_VERSION}" .
+echo "Edit .env file"
 
-docker-compose up -d
+source .env
+
+docker build -t "${OPENSEARCH_IMAGE}:${OPENSEARCH_VERSION}" ./opensearch
 ```
 
 OpenSearch Dashboard Dev Tools: [http://localhost:5601/app/dev_tools#/console](http://localhost:5601/app/dev_tools#/console)
+
+
+## How to use
+
+```shell
+docker-compose up -d
+docker-compose stop
+```
