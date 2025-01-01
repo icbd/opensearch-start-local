@@ -4,9 +4,9 @@ Default URL: `postgresql://postgres:changeme@localhost`
 
 pgAdmin 4 Dashboard: [http://localhost:5050/browser/](http://localhost:5050/browser/)
 
-## QDrant
+## Qdrant
 
-QDrant Dashboard: [http://localhost:6333/dashboard#/collections](http://localhost:6333/dashboard#/collections)
+Qdrant Dashboard: [http://localhost:6333/dashboard#/collections](http://localhost:6333/dashboard#/collections)
 
 ## OpenSearch and OpenSearch Dashboard
 
