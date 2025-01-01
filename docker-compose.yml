@@ -1,5 +1,6 @@
 include:
   - qdrant/docker-compose.yml
+  - postgresql/docker-compose.yml
 
 services:
   opensearch-node1: # This is also the hostname of the container within the Docker network (i.e. https://opensearch-node1/)
