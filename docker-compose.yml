@@ -1,4 +1,6 @@
-version: '3'
+include:
+  - qdrant/docker-compose.yml
+
 services:
   opensearch-node1: # This is also the hostname of the container within the Docker network (i.e. https://opensearch-node1/)
     image: ${OPENSEARCH_IMAGE}:${OPENSEARCH_VERSION} # Specifying the latest available image - modify if you want a specific version
