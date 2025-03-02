@@ -23,6 +23,7 @@ services:
       - 9600:9600 # Performance Analyzer
     networks:
       - opensearch-net # All of the containers will join the same Docker bridge network
+    restart: always
   opensearch-dashboards:
     image: opensearchproject/opensearch-dashboards:${OPENSEARCH_VERSION} # Make sure the version of opensearch-dashboards matches the version of opensearch installed on other nodes
     container_name: opensearch-dashboards
@@ -34,6 +35,7 @@ services:
       OPENSEARCH_HOSTS: '["http://opensearch-node1:9200"]' # Define the OpenSearch nodes that OpenSearch Dashboards will query
     networks:
       - opensearch-net
+    restart: always
 
 volumes:
   opensearch-data1:
